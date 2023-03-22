@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import time
-
+# Given an array of strings strs, group the anagrams together. You can return the answer in any order.
 hello = "group_anagrams"
 
 def groupAnagrams(strs: list[str], solution) -> list[list[str]]:
