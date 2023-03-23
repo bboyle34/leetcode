@@ -10,6 +10,9 @@ def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         if target == matrix[middle][0]:
             answer = True
             break
+        elif middle == 0:
+            row = matrux[middle]
+            break
         elif target < matrix[middle][0]:
             row = matrix[middle]
             r = middle - 1
