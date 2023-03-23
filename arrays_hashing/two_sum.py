@@ -29,9 +29,12 @@ def twoSum(nums: list[int], target: int, solution) -> list[int]:
             break
         dict1[j] = i
     """
-    for i in range(len(nums)):
-        r = target - nums[i]
-        if r in nums:
+    prev_map = {}
+    for i, n in enumerate(nums):
+        r = target - n
+        if r in prev_map:
+            answer = [prev_map[r], i]
+            """
             if i == nums.index(r):
                 continue
             elif i > nums.index(r):
@@ -39,6 +42,8 @@ def twoSum(nums: list[int], target: int, solution) -> list[int]:
             else:
                 answer = [i, nums.index(r)]
             break
+            """
+        prev_map[n] = i
             
 
     if answer == solution:
